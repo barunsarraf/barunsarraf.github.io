@@ -1,0 +1,74 @@
+body {
+    font-family: 'Quicksand';
+}
+.mySlides {display:none;}
+.roundimage {
+  border-radius: 50%;
+}
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+@media only screen and (max-width: 325px) {
+  .main {
+    margin-top: -1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+#left-animate{
+
+  position: relative;
+  overflow: hidden;
+  animation: floatText 1s  ease-out;
+}
+@-webkit-keyframes floatText{
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+.animate{
+  animation: scaleup  1s  alternate infinite ease-in-out;
+}
+
+@-webkit-keyframes scaleup{
+  from {
+    transform: scale(0.85);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+
+.button {
+  border-radius: 5px;
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 6px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
