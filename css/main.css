@@ -4,6 +4,7 @@ body {
 .mySlides {display:none;}
 .roundimage {
   border-radius: 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .main {
   display: flex;
@@ -16,26 +17,30 @@ body {
 	right: 0;
 }
 
-@media only screen and (max-width: 325px) {
+@media only screen and (max-width: 600px) {
   .main {
-    margin-top: -1200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    margin-top: -170px;
+    flex-direction: column;
+  }
+  .mob{
+    text-align: center;
+  }
+  #left-animate{
+    position: relative;
+    overflow: hidden;
+  }
+
+}
+
+@media only screen and (min-width: 601px) {
+  #left-animate{
+    position: relative;
+    overflow: hidden;
+    margin-left: 30px;
+    animation: floatText 1s  ease-out;
   }
 }
 
-#left-animate{
-
-  position: relative;
-  overflow: hidden;
-  animation: floatText 1s  ease-out;
-}
 @-webkit-keyframes floatText{
   from {
     transform: translateX(-50%);
