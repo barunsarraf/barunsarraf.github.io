@@ -6,6 +6,7 @@ body {
 .roundimage {
   border-radius: 50%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width:230px;z-index: 9999;
 }
 .imageview{
   margin: 50px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -22,9 +23,10 @@ body {
 	right: 0;
 }
 
-@media only screen and (max-width: 600px) {
+/* for mobileview */
+@media only screen and (max-width: 600px) { 
   .main {
-    margin-top: -170px;
+    margin-top: -200px;
     flex-direction: column;
   }
   .mob{
@@ -36,10 +38,25 @@ body {
   }
   .startContent
 {
-  margin-top:550px
+  margin-top:550px;
+  padding: 2%;
+  
+}
+.headImage{
+  display: none;
+}
+.headImage2{
+  display: none;
+}
+.txtaligncenter{
+  text-align: center;
+}
+.roundimage{
+  width: 50%;
+  z-index: 9999;
+}
 }
 
-}
 
 @media only screen and (min-width: 601px) {
   #left-animate{
@@ -50,7 +67,11 @@ body {
   }
   .startContent
 {
-  margin-top:900px
+  margin-top:850px
+}
+.txtaligncenter
+{
+  margin-left: 20px;
 }
 }
 
@@ -59,7 +80,7 @@ body {
     transform: translateX(-50%);
   }
   to {
-    transform: translateX(0%);
+    transform: translateX(10%);
   }
 }
 
@@ -72,11 +93,30 @@ body {
     transform: scale(0.85);
   }
   to {
-    transform: scale(1);
+    transform: scale(1.2);
   }
+}
+.headImage{
+  z-index: 9999;width: 32%;border-radius: 10px;
+}
+.headImage2{
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+  z-index: 9999;width: 32%;border-radius: 10px;text-align: end;
+  transition: transform .5s ease;
+  overflow: hidden;
+}
+
+.headImage2:hover{
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(0%);
+  transform: scale(1.02);
 }
 
 
+.headImage3{
+  z-index: 9999;width: 18%;border-radius: 10px;text-align: end;
+}
 .button {
   border-radius: 5px;
   background-color: #000000;
@@ -90,3 +130,16 @@ body {
   margin: 4px 2px;
   cursor: pointer;
 }
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
