@@ -38,7 +38,41 @@ body {
   }
   .startContent
 {
-  margin-top:550px;
+  margin-top:510px;
+  padding: 2%;
+  
+}
+.headImage{
+  display: none;
+}
+.headImage2{
+  display: none;
+}
+.txtaligncenter{
+  text-align: center;
+}
+.roundimage{
+  width: 50%;
+  z-index: 9999;
+}
+}
+
+/* for mobileview */
+@media only screen and (max-width: 200px) { 
+  .main {
+    margin-top: -200px;
+    flex-direction: column;
+  }
+  .mob{
+    text-align: center;
+  }
+  #left-animate{
+    position: relative;
+    overflow: hidden;
+  }
+  .startContent
+{
+  margin-top:400px;
   padding: 2%;
   
 }
